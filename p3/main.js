@@ -28,22 +28,33 @@
 						var error = false;
 
 						for (var i = 0; i < notes.length; i++) {
-							console.log(notes[i]);
-
+							
+							//es int?
 							if ( notes[i] % 1 === 0) {
 								error = 0;
 							} else {
 								error = 1;
-								console.log('la nota '+notes[i]+' no es del tipo int');
+								//console.log('la nota '+notes[i]+' no es del tipo int');
 								return false;
 							}
 						}
 
-						console.log('e: '+error);
+						
 						if ( error === 0) {
-							console.log('creando obj');
-							this.name 	= name;
-							this.notes	= notes;
+							//console.log('creando obj');
+							this.name 		= name;
+							this.notes		= notes;
+							this.promedio 	= function() {
+
+								var sum = 0;
+
+								for (var i = 0; i < notes.length; i++) {
+									sum = sum + notes[i];
+								}
+
+								var avg = sum / notes.length;
+								console.log(avg);	
+							};
 						}
 
 					} else {
@@ -60,6 +71,7 @@
 	/* 	forma de uso 
 		===========/
 		
-		var copied = copyObject(test); 
+		var pedro = new Alumnos('pedro',[7,6,7]);
+		pedro.promedio();
 
 	*/
