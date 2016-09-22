@@ -1,0 +1,12 @@
+/* styles for ej 5 */
+
+.box {
+	width:200px;
+	height: 200px;
+	background-color:#f66;
+	position: relative;
+}
+
+.mg-t-40 {
+	margin-top:40px;
+}
