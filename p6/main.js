@@ -14,12 +14,7 @@ $(document).ready(function() {
 		$('#mainDiv ul').append('<li rel="'+j+'">Elemento '+j+'</li>');
 
 
-	});
+	}).children().click(function(e) { return false;});
 	
-	$('#mainDiv ul li').on('click', function(e) {
-		console.log('no');
-		e.preventDefault();
-	});
-
 
 });
