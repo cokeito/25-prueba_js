@@ -22,6 +22,11 @@ $(document).ready(function() {
 		$('#userOutput').css({ "color": $(this).val() });
 	});
 
+	$('body').on('change','#fontName', function() {
+		console.log($(this).val());
+		$('#userOutput').css({ "font-family": $(this).val() });
+	});
+
 
 });
 	
